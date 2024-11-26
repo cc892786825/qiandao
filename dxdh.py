@@ -242,7 +242,7 @@ async def exchange(s, phone, title, aid,jsexec, ckvalue):
        
 
 async def check(s,item,ckvalue):
-    checkGoods = s.get('https://wapact.189.cn:9001/gateway/standQuery/detailNew/check?activityId=' + item, cookies=ckvalue).json()
+    checkGoods = s.get('https://wapact.189.cn:9001/gateway/standQuery/detailNew/check?activityId={item}&_={int(time.time())}, cookies=ckvalue).json()
     return checkGoods
 
 async def conversionRights(phone, aid,session):
