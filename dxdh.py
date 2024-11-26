@@ -223,7 +223,7 @@ def get_ticket(phone,userId,token):
 
 async def exchange(s, phone, title, aid,jsexec, ckvalue):
     try:
-        url="https://wapact.189.cn:9001/gateway/stand/detailNew/exchange"
+        url="https://wapact.189.cn:9001/gateway/standExchange/detailNew/exchange"
         # getck = await asyncio.to_thread(jsexec.call, "getck") # 两种方式，一种用ck，一种用后缀
         # getck = getck.split(';')[0].split('=')
         # ckvalue[getck[0]] = getck[1]
@@ -242,7 +242,7 @@ async def exchange(s, phone, title, aid,jsexec, ckvalue):
        
 
 async def check(s,item,ckvalue):
-    checkGoods = s.get('https://wapact.189.cn:9001/gateway/stand/detailNew/check?activityId=' + item, cookies=ckvalue).json()
+    checkGoods = s.get('https://wapact.189.cn:9001/gateway/standQuery/detailNew/check?activityId=' + item, cookies=ckvalue).json()
     return checkGoods
 
 async def conversionRights(phone, aid,session):
