@@ -1,3 +1,5 @@
+电信签到
+
 const _0x49dfef = _0x5370a4("电信营业厅"),
     _0x8e0885 = require("got"),
     _0x203c4a = require("path"),
