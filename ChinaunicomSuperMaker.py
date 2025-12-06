@@ -31,7 +31,7 @@ from urllib3.exceptions import NameResolutionError, NewConnectionError
 from requests.exceptions import RequestException, HTTPError
 from urllib3.exceptions import NewConnectionError, MaxRetryError, NameResolutionError
 
-GrantPrize = True # 权益超市自动领奖：启用True/禁用False
+GrantPrize = False # 权益超市自动领奖：启用True/禁用False
 
 #=================================================
 logging.basicConfig(
